@@ -1,0 +1,12 @@
+Hookmail
+
+I wanted to receive an email when the Fog rubygem was finally released.
+
+  git clone git://github.com/halorgium/hookmail.git
+  heroku create
+  git push heroku master
+  heroku addons:add mailgun:starter
+  heroku config:add HOOK_EMAIL_FROM=hookmail@example.com HOOK_EMAIL_TO=you@example.com HOOK_KEY=abcde
+  gem webhook fog -a https://white-elephant-1192.herokuapp.com/hook/abcde
+
+Hopefully, I will receive an email soon.
